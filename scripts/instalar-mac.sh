@@ -8,7 +8,10 @@ if ! command -v brew >/dev/null 2>&1; then
   eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null || /usr/local/bin/brew shellenv)"
 fi
 
-command -v node >/dev/null 2>&1 || brew install node
+# Remotion necesita Node.js 18 o superior
+if ! command -v node >/dev/null 2>&1 || [ "$(node -p 'process.versions.node.split(".")[0]')" -lt 18 ]; then
+  brew install node || brew upgrade node
+fi
 command -v ffmpeg >/dev/null 2>&1 || brew install ffmpeg
 
 cd "$(dirname "$0")/../video"

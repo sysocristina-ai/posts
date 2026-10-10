@@ -2,7 +2,8 @@
 # Instala Node.js, FFmpeg y las dependencias de Remotion en Ubuntu/Debian.
 set -euo pipefail
 
-if ! command -v node >/dev/null 2>&1; then
+# Remotion necesita Node.js 18 o superior
+if ! command -v node >/dev/null 2>&1 || [ "$(node -p 'process.versions.node.split(".")[0]')" -lt 18 ]; then
   curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt-get install -y nodejs
 fi

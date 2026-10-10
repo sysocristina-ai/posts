@@ -4,6 +4,8 @@ Proyecto de [Remotion](https://www.remotion.dev) para crear y editar vídeos con
 
 ## Instalación en tu ordenador
 
+Requisitos: Node.js 18 o superior (el script lo instala o actualiza si hace falta).
+
 Desde la raíz del repositorio, ejecuta el script de tu sistema. Instala Node.js, FFmpeg,
 las dependencias del proyecto y el navegador headless que usa Remotion para renderizar:
 
@@ -22,10 +24,16 @@ npm run render   # renderiza MiVideo en out/video.mp4
 npm run check    # lista las composiciones disponibles
 ```
 
-Cambiar textos sin tocar el código:
+Cambiar textos sin tocar el código: crea un archivo `props.json` en `video/`
+
+```json
+{ "titulo": "Nuevo título", "subtitulo": "Mi subtítulo", "colorFondo": "#222222", "colorTexto": "#ffffff" }
+```
+
+y renderiza con (funciona igual en macOS, Linux y Windows):
 
 ```bash
-npx remotion render MiVideo out/otro.mp4 --props='{"titulo":"Nuevo título","subtitulo":"...","colorFondo":"#222","colorTexto":"#fff"}'
+npx remotion render MiVideo out/otro.mp4 --props=props.json
 ```
 
 ## Estructura
