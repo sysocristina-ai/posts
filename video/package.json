@@ -6,10 +6,13 @@
   "scripts": {
     "studio": "remotion studio",
     "render": "remotion render MiVideo out/video.mp4",
-    "check": "remotion compositions"
+    "check": "remotion compositions",
+    "render:flexibilidad": "remotion render Flexibilidad out/flexibilidad.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.534",
+    "@remotion/fonts": "^4.0.534",
+    "@remotion/media-parser": "^4.0.534",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "remotion": "4.0.534"

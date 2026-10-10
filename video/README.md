@@ -36,6 +36,19 @@ y renderiza con (funciona igual en macOS, Linux y Windows):
 npx remotion render MiVideo out/otro.mp4 --props=props.json
 ```
 
+## Vídeo «Flexibilidad» (`src/flexibilidad/`)
+
+Edición de `public/1009.mp4` con rótulos, iconos animados, zooms y barra de progreso,
+sincronizados con lo que se dice en el vídeo. Vista previa: `vista-previa/flexibilidad-preview.mp4`.
+
+Render final con el vídeo original a máxima calidad:
+
+1. Copia tu vídeo original a `video/public/` con el nombre `1009.mp4` (sustituye al que hay).
+2. Ejecuta `npm run render:flexibilidad` dentro de `video/`.
+3. El resultado queda en `video/out/flexibilidad.mp4`.
+
+Los textos están en `src/flexibilidad/Flexibilidad.tsx`; los tiempos de cada tramo, en la constante `T`.
+
 ## Estructura
 
 - `src/Root.tsx` — registra las composiciones (tamaño, fps, duración, props por defecto).

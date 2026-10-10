@@ -1,21 +1,37 @@
 import { Composition } from "remotion";
 import { MiVideo } from "./MiVideo";
+import { Flexibilidad, calcularMetadatos } from "./flexibilidad/Flexibilidad";
 
 export const RemotionRoot: React.FC = () => {
   return (
-    <Composition
-      id="MiVideo"
-      component={MiVideo}
-      durationInFrames={150}
-      fps={30}
-      width={1080}
-      height={1920}
-      defaultProps={{
-        titulo: "Hola desde Remotion",
-        subtitulo: "Vídeo generado automáticamente",
-        colorFondo: "#111111",
-        colorTexto: "#ffffff",
-      }}
-    />
+    <>
+      <Composition
+        id="Flexibilidad"
+        component={Flexibilidad}
+        durationInFrames={792}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          video: "1009.mp4",
+          llamadaFinal: "Sígueme para más",
+        }}
+        calculateMetadata={calcularMetadatos}
+      />
+      <Composition
+        id="MiVideo"
+        component={MiVideo}
+        durationInFrames={150}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          titulo: "Hola desde Remotion",
+          subtitulo: "Vídeo generado automáticamente",
+          colorFondo: "#111111",
+          colorTexto: "#ffffff",
+        }}
+      />
+    </>
   );
 };
