@@ -49,6 +49,16 @@ Render final con el vídeo original a máxima calidad:
 
 Los textos están en `src/flexibilidad/Flexibilidad.tsx`; los tiempos de cada tramo, en la constante `T`.
 
+## Vídeo «Objetivos» (semáforo) (`src/objetivos/`)
+
+Edición de `public/objetivos.mp4` con un semáforo que enciende verde (proceso), ámbar (rendimiento)
+y rojo (resultado) según lo que se dice. Vista previa: `vista-previa/objetivos-semaforo.mp4`.
+Render final: copia tu original a `video/public/objetivos.mp4` y ejecuta `npm run render:objetivos`.
+
+## Reel 1015 + 1014 (`src/clips/`)
+
+Une los clips quitando silencios (`src/clips/reel-1014-1015.ts`). Render: `npm run render:reel1014y1015`.
+
 ## Estructura
 
 - `src/Root.tsx` — registra las composiciones (tamaño, fps, duración, props por defecto).
