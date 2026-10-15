@@ -54,6 +54,8 @@ Los textos están en `src/flexibilidad/Flexibilidad.tsx`; los tiempos de cada tr
 Edición de `public/objetivos.mp4` con un semáforo que enciende verde (proceso), ámbar (rendimiento)
 y rojo (resultado) según lo que se dice. Vista previa: `vista-previa/objetivos-semaforo.mp4`.
 Render final: copia tu original a `video/public/objetivos.mp4` y ejecuta `npm run render:objetivos`.
+Versión final con volumen normalizado (−16 LUFS, picos a −1,5 dB): `final/objetivos-final.mp4`. Para repetirlo:
+`ffmpeg -i out/objetivos.mp4 -c:v copy -af loudnorm=I=-16:TP=-1.5:LRA=11 -c:a aac -b:a 192k out/objetivos-final.mp4`
 
 ## Reel 1015 + 1014 (`src/clips/`)
 
