@@ -54,9 +54,10 @@ Los textos están en `src/flexibilidad/Flexibilidad.tsx`; los tiempos de cada tr
 Edición de `public/objetivos.mp4` con un semáforo que enciende verde (proceso), ámbar (rendimiento)
 y rojo (resultado) según lo que se dice. Vista previa: `vista-previa/objetivos-semaforo.mp4`.
 Render final: copia tu original a `video/public/objetivos.mp4` y ejecuta `npm run render:objetivos`.
-Versión final con reducción de ruido y volumen normalizado: `final/objetivos-final.mp4`.
-Audio: filtro paso alto a 70 Hz, reducción de ruido `afftdn` (15 dB) con perfil de ruido aprendido de un silencio
-(12,8–13,5 s) y `loudnorm` a −16 LUFS con picos máximos de −1,5 dB. El vídeo se copia sin recomprimir.
+Versiones finales (vídeo copiado sin recomprimir):
+- `final/objetivos-final.mp4`: volumen original, con reducción de ruido (`highpass` 70 Hz + `afftdn` 15 dB
+  con perfil de ruido aprendido del silencio 12,8–13,5 s).
+- `final/objetivos-audio-original.mp4`: audio exactamente como en el vídeo original.
 
 ## Reel 1015 + 1014 (`src/clips/`)
 
