@@ -2,6 +2,7 @@ import { Composition } from "remotion";
 import { MiVideo } from "./MiVideo";
 import { Flexibilidad, calcularMetadatos } from "./flexibilidad/Flexibilidad";
 import { Objetivos, calcularMetadatosObjetivos } from "./objetivos/Objetivos";
+import { Motivacion, duracionMotivacion, propsMotivacion } from "./motivacion/Motivacion";
 import { UnionClips, calcularDuracionUnion } from "./clips/UnionClips";
 import { cortes1014y1015 } from "./clips/reel-1014-1015";
 
@@ -20,6 +21,15 @@ export const RemotionRoot: React.FC = () => {
           llamadaFinal: "Sígueme para más",
         }}
         calculateMetadata={calcularMetadatos}
+      />
+      <Composition
+        id="Motivacion"
+        component={Motivacion}
+        durationInFrames={duracionMotivacion(propsMotivacion.cortes)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={propsMotivacion}
       />
       <Composition
         id="Objetivos"

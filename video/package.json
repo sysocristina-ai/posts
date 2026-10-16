@@ -9,7 +9,8 @@
     "check": "remotion compositions",
     "render:flexibilidad": "remotion render Flexibilidad out/flexibilidad.mp4",
     "render:objetivos": "remotion render Objetivos out/objetivos.mp4",
-    "render:reel1014y1015": "remotion render Reel1014y1015 out/reel-1014-1015.mp4"
+    "render:reel1014y1015": "remotion render Reel1014y1015 out/reel-1014-1015.mp4",
+    "render:motivacion": "remotion render Motivacion out/motivacion.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.534",

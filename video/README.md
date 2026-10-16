@@ -59,6 +59,12 @@ Versiones finales (vídeo copiado sin recomprimir):
   con perfil de ruido aprendido del silencio 12,8–13,5 s).
 - `final/objetivos-audio-original.mp4`: audio exactamente como en el vídeo original.
 
+## Vídeo «Motivación» (batería de 5 niveles) (`src/motivacion/`)
+
+Edición de `public/motivacion.mp4`: sin pausas largas ni la frase "vamos mejorando" (`src/motivacion/cortes.ts`),
+con una batería que se carga del nivel 1 (amotivación) al 5 (regulación integrada) y encuesta final.
+Final: `final/motivacion-final.mp4`. Render: `npm run render:motivacion`.
+
 ## Reel 1015 + 1014 (`src/clips/`)
 
 Une los clips quitando silencios (`src/clips/reel-1014-1015.ts`). Render: `npm run render:reel1014y1015`.
